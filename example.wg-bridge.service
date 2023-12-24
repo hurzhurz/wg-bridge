@@ -1,0 +1,12 @@
+[Unit]
+Description=Wireguard Bridge
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=5
+ExecStart=/usr/bin/python3 /opt/wg-bridge/wg-bridge.py --keys anVzdCBhbiBleGFtcGxlLCBkb24ndCB1c2UgdGhpcyE=,cmVhbGx5LCBpdCBpcyBwcmV0dHkgcG9pbnRsZXNzISE=
+
+[Install]
+WantedBy=multi-user.target

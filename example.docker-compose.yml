@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  wg-bridge:
+    build: .
+    restart: on-failure
+    ports:
+      - "51820:51820/udp"
+    command: "--keys anVzdCBhbiBleGFtcGxlLCBkb24ndCB1c2UgdGhpcyE=,cmVhbGx5LCBpdCBpcyBwcmV0dHkgcG9pbnRsZXNzISE="
